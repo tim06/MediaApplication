@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.tim.mediaapplication.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_FFmpegFragment"
+            app:destination="@id/FFmpegFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_exoFragment"
+            app:destination="@id/exoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_vlcFragment"
+            app:destination="@id/vlcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FFmpegFragment"
+        android:name="com.tim.mediaapplication.ffmpeg.FFmpegFragment"
+        android:label="FFmpegFragment" />
+    <fragment
+        android:id="@+id/exoFragment"
+        android:name="com.tim.mediaapplication.exo.ExoFragment"
+        android:label="ExoFragment" />
+    <fragment
+        android:id="@+id/vlcFragment"
+        android:name="com.tim.mediaapplication.vlc.VlcFragment"
+        android:label="VlcFragment" />
+</navigation>
